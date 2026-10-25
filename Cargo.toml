@@ -1,0 +1,17 @@
+[package]
+name = "gpupaper"
+version = "0.1.0"
+edition = "2021"
+description = "Render a GLSL fragment shader as a Wayland wallpaper"
+
+[dependencies]
+wayland-client = "0.31"
+wayland-protocols-wlr = { version = "0.3", features = ["client"] }
+wayland-egl = "0.32"
+khronos-egl = { version = "6", features = ["static"] }
+glow = "0.18"
+libc = "0.2"
+
+[profile.release]
+lto = true
+strip = true
